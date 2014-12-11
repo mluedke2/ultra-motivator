@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA61B85A1A26B43600C88D65 /* SafariKeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61B8591A26B43600C88D65 /* SafariKeychainManager.swift */; };
+		FAA68FBB1A397CC2007FCCE7 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = FAA68FB51A397C1A007FCCE7 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FAB6D6121A13165900F4693C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB6D6111A13165900F4693C /* AppDelegate.swift */; };
+		FAB6D6171A13165900F4693C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB6D6151A13165900F4693C /* Main.storyboard */; };
+		FAB6D6191A13165900F4693C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB6D6181A13165900F4693C /* Images.xcassets */; };
+		FAB6D61C1A13165900F4693C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB6D61A1A13165900F4693C /* LaunchScreen.xib */; };
+		FAB6D6331A131AF800F4693C /* MotivationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB6D6321A131AF800F4693C /* MotivationViewController.swift */; };
+		FAB6D6351A131B1500F4693C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB6D6341A131B1500F4693C /* LoginViewController.swift */; };
+		FADEDE161A25A5CE0081077A /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADEDE151A25A5CE0081077A /* SignupViewController.swift */; };
+		FADEDE191A25A61E0081077A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADEDE181A25A61E0081077A /* HomeViewController.swift */; };
+		FADEDE1B1A25A6420081077A /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADEDE1A1A25A6420081077A /* UpdateViewController.swift */; };
+		FADEDE1D1A25C5900081077A /* UltraMotivatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADEDE1C1A25C5900081077A /* UltraMotivatorViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAA68FB41A397C1A007FCCE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAA68FAF1A397C1A007FCCE7 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		FAA68FB61A397C1A007FCCE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAA68FAF1A397C1A007FCCE7 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
+		};
+		FAA68FB81A397C97007FCCE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAA68FAF1A397C1A007FCCE7 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FAB6D6491A13256100F4693C /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FAA68FBB1A397CC2007FCCE7 /* Alamofire.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FA61B8591A26B43600C88D65 /* SafariKeychainManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariKeychainManager.swift; sourceTree = "<group>"; };
+		FA9C8C2C1A2EE2970090560A /* UltraMotivator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = UltraMotivator.entitlements; sourceTree = "<group>"; };
+		FAA68FAF1A397C1A007FCCE7 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = ../../Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		FAB6D60C1A13165900F4693C /* UltraMotivator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltraMotivator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAB6D6101A13165900F4693C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAB6D6111A13165900F4693C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FAB6D6161A13165900F4693C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAB6D6181A13165900F4693C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FAB6D61B1A13165900F4693C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		FAB6D6321A131AF800F4693C /* MotivationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MotivationViewController.swift; path = ViewControllers/MotivationViewController.swift; sourceTree = "<group>"; };
+		FAB6D6341A131B1500F4693C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewControllers/LoginViewController.swift; sourceTree = "<group>"; };
+		FADEDE151A25A5CE0081077A /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignupViewController.swift; path = ViewControllers/SignupViewController.swift; sourceTree = "<group>"; };
+		FADEDE181A25A61E0081077A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ViewControllers/HomeViewController.swift; sourceTree = "<group>"; };
+		FADEDE1A1A25A6420081077A /* UpdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdateViewController.swift; path = ViewControllers/UpdateViewController.swift; sourceTree = "<group>"; };
+		FADEDE1C1A25C5900081077A /* UltraMotivatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UltraMotivatorViewController.swift; path = ViewControllers/UltraMotivatorViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAB6D6091A13165900F4693C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FAA68FB01A397C1A007FCCE7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAA68FB51A397C1A007FCCE7 /* Alamofire.framework */,
+				FAA68FB71A397C1A007FCCE7 /* AlamofireTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAB6D6031A13165900F4693C = {
+			isa = PBXGroup;
+			children = (
+				FAA68FAF1A397C1A007FCCE7 /* Alamofire.xcodeproj */,
+				FAB6D60E1A13165900F4693C /* UltraMotivator */,
+				FAB6D60D1A13165900F4693C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FAB6D60D1A13165900F4693C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAB6D60C1A13165900F4693C /* UltraMotivator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAB6D60E1A13165900F4693C /* UltraMotivator */ = {
+			isa = PBXGroup;
+			children = (
+				FA9C8C2C1A2EE2970090560A /* UltraMotivator.entitlements */,
+				FA61B8591A26B43600C88D65 /* SafariKeychainManager.swift */,
+				FAB6D6311A131AA900F4693C /* ViewControllers */,
+				FAB6D6111A13165900F4693C /* AppDelegate.swift */,
+				FAB6D6151A13165900F4693C /* Main.storyboard */,
+				FAB6D6181A13165900F4693C /* Images.xcassets */,
+				FAB6D61A1A13165900F4693C /* LaunchScreen.xib */,
+				FAB6D60F1A13165900F4693C /* Supporting Files */,
+			);
+			path = UltraMotivator;
+			sourceTree = "<group>";
+		};
+		FAB6D60F1A13165900F4693C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAB6D6101A13165900F4693C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAB6D6311A131AA900F4693C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FAB6D6341A131B1500F4693C /* LoginViewController.swift */,
+				FAB6D6321A131AF800F4693C /* MotivationViewController.swift */,
+				FADEDE151A25A5CE0081077A /* SignupViewController.swift */,
+				FADEDE181A25A61E0081077A /* HomeViewController.swift */,
+				FADEDE1A1A25A6420081077A /* UpdateViewController.swift */,
+				FADEDE1C1A25C5900081077A /* UltraMotivatorViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAB6D60B1A13165900F4693C /* UltraMotivator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAB6D62B1A13165900F4693C /* Build configuration list for PBXNativeTarget "UltraMotivator" */;
+			buildPhases = (
+				FAB6D6081A13165900F4693C /* Sources */,
+				FAB6D6091A13165900F4693C /* Frameworks */,
+				FAB6D60A1A13165900F4693C /* Resources */,
+				FAB6D6491A13256100F4693C /* Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAA68FB91A397C97007FCCE7 /* PBXTargetDependency */,
+			);
+			name = UltraMotivator;
+			productName = UltraMotivator;
+			productReference = FAB6D60C1A13165900F4693C /* UltraMotivator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAB6D6041A13165900F4693C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Matt Luedke";
+				TargetAttributes = {
+					FAB6D60B1A13165900F4693C = {
+						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = F47X5999MK;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = FAB6D6071A13165900F4693C /* Build configuration list for PBXProject "UltraMotivator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAB6D6031A13165900F4693C;
+			productRefGroup = FAB6D60D1A13165900F4693C /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = FAA68FB01A397C1A007FCCE7 /* Products */;
+					ProjectRef = FAA68FAF1A397C1A007FCCE7 /* Alamofire.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				FAB6D60B1A13165900F4693C /* UltraMotivator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		FAA68FB51A397C1A007FCCE7 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = FAA68FB41A397C1A007FCCE7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FAA68FB71A397C1A007FCCE7 /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = FAA68FB61A397C1A007FCCE7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAB6D60A1A13165900F4693C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB6D6171A13165900F4693C /* Main.storyboard in Resources */,
+				FAB6D61C1A13165900F4693C /* LaunchScreen.xib in Resources */,
+				FAB6D6191A13165900F4693C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAB6D6081A13165900F4693C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FADEDE191A25A61E0081077A /* HomeViewController.swift in Sources */,
+				FAB6D6351A131B1500F4693C /* LoginViewController.swift in Sources */,
+				FAB6D6331A131AF800F4693C /* MotivationViewController.swift in Sources */,
+				FA61B85A1A26B43600C88D65 /* SafariKeychainManager.swift in Sources */,
+				FADEDE161A25A5CE0081077A /* SignupViewController.swift in Sources */,
+				FAB6D6121A13165900F4693C /* AppDelegate.swift in Sources */,
+				FADEDE1D1A25C5900081077A /* UltraMotivatorViewController.swift in Sources */,
+				FADEDE1B1A25A6420081077A /* UpdateViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAA68FB91A397C97007FCCE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			targetProxy = FAA68FB81A397C97007FCCE7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FAB6D6151A13165900F4693C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAB6D6161A13165900F4693C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FAB6D61A1A13165900F4693C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAB6D61B1A13165900F4693C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAB6D6291A13165900F4693C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FAB6D62A1A13165900F4693C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAB6D62C1A13165900F4693C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UltraMotivator/UltraMotivator.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matt Luedke (S375MRL3UX)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matt Luedke (S375MRL3UX)";
+				INFOPLIST_FILE = UltraMotivator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "272481c6-7615-45d6-bbfb-22f9ff4073e5";
+			};
+			name = Debug;
+		};
+		FAB6D62D1A13165900F4693C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UltraMotivator/UltraMotivator.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matt Luedke (S375MRL3UX)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matt Luedke (S375MRL3UX)";
+				INFOPLIST_FILE = UltraMotivator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "272481c6-7615-45d6-bbfb-22f9ff4073e5";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAB6D6071A13165900F4693C /* Build configuration list for PBXProject "UltraMotivator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAB6D6291A13165900F4693C /* Debug */,
+				FAB6D62A1A13165900F4693C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAB6D62B1A13165900F4693C /* Build configuration list for PBXNativeTarget "UltraMotivator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAB6D62C1A13165900F4693C /* Debug */,
+				FAB6D62D1A13165900F4693C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAB6D6041A13165900F4693C /* Project object */;
+}
