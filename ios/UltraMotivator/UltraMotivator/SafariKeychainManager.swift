@@ -12,7 +12,7 @@ class SafariKeychainManager {
     
     class func checkSafariCredentialsWithCompletion(completion: ((username: String?, password: String?) -> Void)) {
         
-        let domain = "mattluedke.com" as CFString
+        let domain: CFString = "mattluedke.com"
         
         SecRequestSharedWebCredential(domain, .None, {
             (credentials: CFArray!, error: CFError?) -> Void in
