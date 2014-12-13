@@ -72,6 +72,7 @@ else:
 			password = str(row[1])
 			if name == input_username and check_password(password, input_password):
 				print """<h1>Signed in as %s</h1>""" % name
+				print """<p>"If you want to build a ship, don't drum up the people to gather wood, and don't assign them tasks and work. Instead, teach them to yearn for the vast and endless sea." - Antoine de Saint-Exupery</p>"""
 				signed_in = True
 				break
 			

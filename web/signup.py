@@ -73,6 +73,7 @@ else:
 			command = "INSERT INTO User(username, password) VALUES(%s,%s)"
 			cur.execute(command, (input_username, hash_password(input_password)))
 			print """<h1>Signed Up As %s</h1>""" % input_username
+			print """<p>"If you want to build a ship, don't drum up the people to gather wood, and don't assign them tasks and work. Instead, teach them to yearn for the vast and endless sea." - Antoine de Saint-Exupery</p>"""
 	
 		except MySQLdb.Error, e:
 			print """<h1>Error %d: %s</h1>""" % (e.args[0], e.args[1])
