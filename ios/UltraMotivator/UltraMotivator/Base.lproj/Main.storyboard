@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vVu-Qx-xDz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vVu-Qx-xDz">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -389,22 +389,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCL-dh-Uq4">
-                                <rect key="frame" x="200" y="152" width="200" height="114"/>
+                                <rect key="frame" x="175" y="124" width="250" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="114" id="ihm-aa-IVa"/>
-                                    <constraint firstAttribute="width" constant="200" id="vwX-og-CFY"/>
+                                    <constraint firstAttribute="height" constant="200" id="ihm-aa-IVa"/>
+                                    <constraint firstAttribute="width" constant="250" id="vwX-og-CFY"/>
                                 </constraints>
-                                <string key="text">""You miss 100% of the shots you don't take."
-- Wayne Gretsky"
-- Michael Scott</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <string key="text">"If you want to build a ship, don't drum up the people to gather wood, divide the work, and give orders. Instead, teach them to yearn for the vast and endless sea." 
+- Antoine de Saint-Exupery</string>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.98431372549019602" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="OCL-dh-Uq4" firstAttribute="top" secondItem="7gP-Yw-Bm8" secondAttribute="bottom" constant="88" id="PCx-cF-A63"/>
+                            <constraint firstItem="OCL-dh-Uq4" firstAttribute="top" secondItem="7gP-Yw-Bm8" secondAttribute="bottom" constant="60" id="PCx-cF-A63"/>
                             <constraint firstAttribute="centerX" secondItem="OCL-dh-Uq4" secondAttribute="centerX" id="k1u-WV-PdY"/>
                         </constraints>
                     </view>
