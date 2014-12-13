@@ -17,6 +17,7 @@ class LoginViewController: UltraMotivatorViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        userNameField.becomeFirstResponder()
         
         SafariKeychainManager.checkSafariCredentialsWithCompletion({
             (username: String?, password: String?) -> Void in

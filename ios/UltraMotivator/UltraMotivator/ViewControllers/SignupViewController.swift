@@ -16,6 +16,11 @@ class SignupViewController: UltraMotivatorViewController {
     @IBOutlet var confirmPasswordField : UITextField!
     @IBOutlet var submitBtn : UIButton!
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        userNameField.becomeFirstResponder()
+    }
+    
     @IBAction private func promptForPassword(sender: AnyObject) {
         showPasswordGenerationDialog({
             let password = SecCreateSharedWebCredentialPassword().takeUnretainedValue()
