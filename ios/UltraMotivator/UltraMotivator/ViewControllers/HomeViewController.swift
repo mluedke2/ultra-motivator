@@ -41,8 +41,13 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction private func signOut(sender: AnyObject) {
+        
+        if let unwrappedUsername = NSUserDefaults.standardUserDefaults().objectForKey("username") as? String {
+            SafariKeychainManager.updateSafariCredentials(unwrappedUsername, password: "")
+        }
         NSUserDefaults.standardUserDefaults().removeObjectForKey("username")
         NSUserDefaults.standardUserDefaults().removeObjectForKey("password")
+        
         self.resetUI()
     }
 }

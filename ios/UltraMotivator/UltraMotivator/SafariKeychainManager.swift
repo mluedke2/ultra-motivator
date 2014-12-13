@@ -39,11 +39,11 @@ class SafariKeychainManager {
     
     class func updateSafariCredentials(username: String, password: String) {
         
-        let domain = "mattluedke.com" as CFString
+        let domain: CFString = "mattluedke.com"
         
         SecAddSharedWebCredential(domain,
             username as CFString,
-            password as CFString,
+            countElements(password) > 0 ? password as CFString : .None,
             {(error: CFError!) -> Void in
              println("error: \(error)")
         });
