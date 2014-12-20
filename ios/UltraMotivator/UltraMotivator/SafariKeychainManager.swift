@@ -17,8 +17,8 @@ class SafariKeychainManager {
     SecRequestSharedWebCredential(domain, .None, {
       (credentials: CFArray!, error: CFError?) -> Void in
       
-      if let unwrappedError = error {
-        println("error: \(unwrappedError)")
+      if let error = error {
+        println("error: \(error)")
         completion(username: nil, password: nil)
       } else if CFArrayGetCount(credentials) > 0 {
         let unsafeCred = CFArrayGetValueAtIndex(credentials, 0)

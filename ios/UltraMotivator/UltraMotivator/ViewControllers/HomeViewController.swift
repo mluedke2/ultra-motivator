@@ -23,13 +23,13 @@ class HomeViewController: UIViewController {
   }
   
   private func resetUI() {
-    if let unwrappedUsername = NSUserDefaults.standardUserDefaults().objectForKey("username") as? String {
+    if let username = NSUserDefaults.standardUserDefaults().objectForKey("username") as? String {
       signInButton.hidden = true;
       signUpButton.hidden = true;
       signOutButton.hidden = false;
       updateButton.hidden = false;
       motivateButton.hidden = false;
-      titleLabel.text = "You're signed in as \(unwrappedUsername)!"
+      titleLabel.text = "You're signed in as \(username)!"
     } else {
       signInButton.hidden = false;
       signUpButton.hidden = false;
@@ -42,8 +42,8 @@ class HomeViewController: UIViewController {
   
   @IBAction private func signOut(sender: AnyObject) {
     
-    if let unwrappedUsername = NSUserDefaults.standardUserDefaults().objectForKey("username") as? String {
-      SafariKeychainManager.updateSafariCredentials(unwrappedUsername, password: "")
+    if let username = NSUserDefaults.standardUserDefaults().objectForKey("username") as? String {
+      SafariKeychainManager.updateSafariCredentials(username, password: "")
     }
     NSUserDefaults.standardUserDefaults().removeObjectForKey("username")
     NSUserDefaults.standardUserDefaults().removeObjectForKey("password")

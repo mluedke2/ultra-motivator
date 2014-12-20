@@ -52,8 +52,8 @@ class LoginViewController: UltraMotivatorViewController {
       .responseJSON { (request, response, JSON, error) in
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         self.submitBtn.enabled = true
-        if let unwrappedError = error {
-          self.showAlert("Error", message: unwrappedError.localizedDescription, nil)
+        if let error = error {
+          self.showAlert("Error", message: error.localizedDescription, nil)
         } else {
           if let dict = JSON as? Dictionary<String, String> {
             let username = dict["username"]
