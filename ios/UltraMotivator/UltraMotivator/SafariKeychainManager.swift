@@ -9,43 +9,43 @@
 import Foundation
 
 class SafariKeychainManager {
+  
+  class func checkSafariCredentialsWithCompletion(completion: ((username: String?, password: String?) -> Void)) {
     
-    class func checkSafariCredentialsWithCompletion(completion: ((username: String?, password: String?) -> Void)) {
-        
-        let domain: CFString = "mattluedke.com"
-        
-        SecRequestSharedWebCredential(domain, .None, {
-            (credentials: CFArray!, error: CFError?) -> Void in
-            
-            if let unwrappedError = error {
-                println("error: \(unwrappedError)")
-                completion(username: nil, password: nil)
-            } else if CFArrayGetCount(credentials) > 0 {
-                let unsafeCred = CFArrayGetValueAtIndex(credentials, 0)
-                let credential: CFDictionaryRef = unsafeBitCast(unsafeCred, CFDictionaryRef.self)
-                let dict: Dictionary<String, String> = credential as Dictionary<String, String>
-                let username = dict[kSecAttrAccount as String]
-                let password = dict[kSecSharedPassword.takeRetainedValue() as String]
-                dispatch_async(dispatch_get_main_queue()) {
-                    completion(username: username, password: password)
-                }
-            } else {
-                dispatch_async(dispatch_get_main_queue()) {
-                    completion(username: nil, password: nil)
-                }
-            }
-        });
-    }
+    let domain: CFString = "mattluedke.com"
     
-    class func updateSafariCredentials(username: String, password: String) {
-        
-        let domain: CFString = "mattluedke.com"
-        
-        SecAddSharedWebCredential(domain,
-            username as CFString,
-            countElements(password) > 0 ? password as CFString : .None,
-            {(error: CFError!) -> Void in
-             println("error: \(error)")
-        });
-    }
+    SecRequestSharedWebCredential(domain, .None, {
+      (credentials: CFArray!, error: CFError?) -> Void in
+      
+      if let unwrappedError = error {
+        println("error: \(unwrappedError)")
+        completion(username: nil, password: nil)
+      } else if CFArrayGetCount(credentials) > 0 {
+        let unsafeCred = CFArrayGetValueAtIndex(credentials, 0)
+        let credential: CFDictionaryRef = unsafeBitCast(unsafeCred, CFDictionaryRef.self)
+        let dict: Dictionary<String, String> = credential as Dictionary<String, String>
+        let username = dict[kSecAttrAccount as String]
+        let password = dict[kSecSharedPassword.takeRetainedValue() as String]
+        dispatch_async(dispatch_get_main_queue()) {
+          completion(username: username, password: password)
+        }
+      } else {
+        dispatch_async(dispatch_get_main_queue()) {
+          completion(username: nil, password: nil)
+        }
+      }
+    });
+  }
+  
+  class func updateSafariCredentials(username: String, password: String) {
+    
+    let domain: CFString = "mattluedke.com"
+    
+    SecAddSharedWebCredential(domain,
+      username as CFString,
+      countElements(password) > 0 ? password as CFString : .None,
+      {(error: CFError!) -> Void in
+        println("error: \(error)")
+    });
+  }
 }
