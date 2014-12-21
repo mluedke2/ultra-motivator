@@ -9,10 +9,10 @@
 import UIKit
 
 class MotivationViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // load more motivation quotes.
-    }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    // load more motivation quotes.
+  }
 }
