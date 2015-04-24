@@ -34,8 +34,8 @@ class LoginViewController: UltraMotivatorViewController {
   
   private func makeSignInRequest(updateKeychain:Bool) {
     
-    if countElements(userNameField.text) < 5
-      || countElements(passwordField.text) < 5 {
+    if count(userNameField.text) < 5
+      || count(passwordField.text) < 5 {
         fillInFieldsReminder()
         return
     }
@@ -53,7 +53,7 @@ class LoginViewController: UltraMotivatorViewController {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         self.submitBtn.enabled = true
         if let error = error {
-          self.showAlert("Error", message: error.localizedDescription, nil)
+          self.showAlert("Error", message: error.localizedDescription, completion: nil)
         } else {
           if let dict = JSON as? Dictionary<String, String> {
             let username = dict["username"]
@@ -66,12 +66,12 @@ class LoginViewController: UltraMotivatorViewController {
               if (updateKeychain) {
                 SafariKeychainManager.updateSafariCredentials(username, password: password)
               }
-              self.showAlert("Logged In", message: "Time To Get Motivated!", {self.navigationController?.popViewControllerAnimated(true)
+              self.showAlert("Logged In", message: "Time To Get Motivated!", completion: {self.navigationController?.popViewControllerAnimated(true)
                 return
               })
             default:
               if let error = dict["error"] {
-                self.showAlert("Error", message: error, nil)
+                self.showAlert("Error", message: error, completion: nil)
               }
             }
           }

@@ -23,8 +23,8 @@ class UpdateViewController: UltraMotivatorViewController {
   @IBAction private func promptForPassword(sender: AnyObject) {
     showPasswordGenerationDialog({
       let password = SecCreateSharedWebCredentialPassword().takeUnretainedValue()
-      self.passwordField.text = password
-      self.confirmPasswordField.text = password
+      self.passwordField.text = password as String
+      self.confirmPasswordField.text = password as String
       self.makeUpdateRequest()
     })
   }
@@ -35,8 +35,8 @@ class UpdateViewController: UltraMotivatorViewController {
   
   private func makeUpdateRequest() {
     
-    if countElements(passwordField.text) < 5
-      || countElements(confirmPasswordField.text) < 5 {
+    if count(passwordField.text) < 5
+      || count(confirmPasswordField.text) < 5 {
         self.fillInFieldsReminder()
         return
     }
@@ -47,8 +47,8 @@ class UpdateViewController: UltraMotivatorViewController {
     }
     
     let parameters = [
-      "username": NSUserDefaults.standardUserDefaults().objectForKey("username") as String,
-      "current_password": NSUserDefaults.standardUserDefaults().objectForKey("password") as String,
+      "username": NSUserDefaults.standardUserDefaults().objectForKey("username") as! String,
+      "current_password": NSUserDefaults.standardUserDefaults().objectForKey("password") as! String,
       "new_password": passwordField.text
     ]
     
@@ -60,7 +60,7 @@ class UpdateViewController: UltraMotivatorViewController {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         self.submitBtn.enabled = true
         if let error = error {
-          self.showAlert("Error", message:error.localizedDescription, nil)
+          self.showAlert("Error", message:error.localizedDescription, completion: nil)
         } else {
           if let dict = JSON as? Dictionary<String, String> {
             let username = dict["username"]
@@ -71,11 +71,11 @@ class UpdateViewController: UltraMotivatorViewController {
               NSUserDefaults.standardUserDefaults().setObject(username, forKey: "username")
               NSUserDefaults.standardUserDefaults().setObject(password, forKey: "password")
               SafariKeychainManager.updateSafariCredentials(username, password: password)
-              self.showAlert("Updated", message: "Your password has been updated.", {self.navigationController?.popViewControllerAnimated(true)
+              self.showAlert("Updated", message: "Your password has been updated.", completion: {self.navigationController?.popViewControllerAnimated(true)
                 return})
             default:
               if let error = dict["error"] {
-                self.showAlert("Error", message: error, nil)
+                self.showAlert("Error", message: error, completion: nil)
               }
             }
           }

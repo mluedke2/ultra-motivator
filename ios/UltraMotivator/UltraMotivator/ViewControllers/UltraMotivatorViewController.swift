@@ -20,7 +20,7 @@ class UltraMotivatorViewController: UIViewController {
   }
   
   func handleTap(recognizer: UITapGestureRecognizer) {
-    for view in self.view.subviews as [UIView] {
+    for view in self.view.subviews as! [UIView] {
       if let textField = view as? UITextField {
         textField.resignFirstResponder()
       }
@@ -51,7 +51,7 @@ class UltraMotivatorViewController: UIViewController {
     let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in }
     alertController.addAction(OKAction)
     
-    self.presentViewController(alertController, animated: true, completion)
+    self.presentViewController(alertController, animated: true, completion: completion)
   }
   
   func showPasswordGenerationDialog(success: (() -> Void)) {

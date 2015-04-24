@@ -23,9 +23,9 @@ class SafariKeychainManager {
       } else if CFArrayGetCount(credentials) > 0 {
         let unsafeCred = CFArrayGetValueAtIndex(credentials, 0)
         let credential: CFDictionaryRef = unsafeBitCast(unsafeCred, CFDictionaryRef.self)
-        let dict: Dictionary<String, String> = credential as Dictionary<String, String>
+        let dict: Dictionary<String, String> = credential as! Dictionary<String, String>
         let username = dict[kSecAttrAccount as String]
-        let password = dict[kSecSharedPassword.takeRetainedValue() as String]
+        let password = dict[kSecSharedPassword.takeRetainedValue() as! String]
         dispatch_async(dispatch_get_main_queue()) {
           completion(username: username, password: password)
         }
@@ -43,7 +43,7 @@ class SafariKeychainManager {
     
     SecAddSharedWebCredential(domain,
       username as CFString,
-      countElements(password) > 0 ? password as CFString : .None,
+      count(password) > 0 ? password as CFString : .None,
       {(error: CFError!) -> Void in
         println("error: \(error)")
     });
