@@ -18,9 +18,12 @@ class UpdateViewController: UltraMotivatorViewController {
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
     passwordField.becomeFirstResponder()
+    if (count(passwordField.text) == 0) {
+        self.promptForPassword()
+    }
   }
   
-  @IBAction private func promptForPassword(sender: AnyObject) {
+  private func promptForPassword() {
     showPasswordGenerationDialog({
       let password = SecCreateSharedWebCredentialPassword().takeUnretainedValue()
       self.passwordField.text = password as String
